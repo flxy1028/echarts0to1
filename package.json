@@ -3,18 +3,28 @@
     "@babel/cli": "^7.17.10",
     "@babel/core": "^7.17.10",
     "@babel/preset-env": "^7.17.10",
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "eslint": "^8.15.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^12.4.1",
+    "mrm": "2",
     "rimraf": "^3.0.2",
-    "rollup": "^2.73.0",
-    "husky": "^8.0.0"
+    "rollup": "^2.73.0"
   },
   "scripts": {
     "lint": "eslint --fix",
     "build": "rimraf -rf ./dist ./lib ./esm && rollup --config",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "jest"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ]
   }
 }
