@@ -2,7 +2,7 @@ import babel from '@rollup/plugin-babel';
 import resolve from '@rollup/plugin-node-resolve';
 
 export default {
-  input: 'src/index.js', // 打包入口
+  input: 'src/renderer/index.js', // 打包入口
   output: [
     {
       file: 'lib/sparrow.js', // 对于 Nodejs，打包成 commonjs

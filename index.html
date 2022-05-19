@@ -1,0 +1,19 @@
+<html>
+    <body>
+    </body>
+    <script type="module">
+    import {createRenderer} from './esm/sparrow.js'
+    const renderer = createRenderer(600, 400);
+    const ring = renderer.ring({
+      cx: 100,
+      cy: 100,
+      r1: 30,
+      r2: 60,
+    //   strokeWidth: 10,
+    //   stroke: 'red', 
+      fill: 'blue',
+    });
+    const node = renderer.node()
+    document.body.appendChild(node)
+    </script>
+</html>
